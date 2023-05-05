@@ -1,3 +1,5 @@
+//the project is in SRC2, not SRC. ignore SRC.
+
 # Lab 2: Blinky-Buzzy Toy
 
 For your second project, your task is to use the MSP430

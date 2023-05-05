@@ -1,0 +1,1145 @@
+student@systems-vm:~> ls
+0-asciiart-Sh0otgit    Documents                    #*message*-20230308-024328#  Templates
+1-tokenizer-Sh0otGit   Downloads                    Music                        testCode
+2-blinky-toy-Sh0otGit  #*message*-20230219-014823#  Pictures                     ti
+bin                    #*message*-20230302-211956#  project-3-lcd-Sh0otGit       Videos
+Desktop                #*message*-20230307-233315#  Public
+student@systems-vm:~> ls
+0-asciiart-Sh0otgit    Documents                    #*message*-20230308-024328#  Templates
+1-tokenizer-Sh0otGit   Downloads                    Music                        testCode
+2-blinky-toy-Sh0otGit  #*message*-20230219-014823#  Pictures                     ti
+bin                    #*message*-20230302-211956#  project-3-lcd-Sh0otGit       Videos
+Desktop                #*message*-20230307-233315#  Public
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o wakedemo.o wakedemo.c
+wakedemo.c:3:10: fatal error: lcdutils.h: No such file or directory
+ #include "lcdutils.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: wakedemo.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd =
+bash: cd: =: No such file or directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd lcdLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-8x12.c  lcddraw.c  lcdtypes.h  lcdutils.h  README.md
+font-5x7.c    lcddemo.c    lcddraw.h  lcdutils.c  Makefile
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-11x16.o font-11x16.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-5x7.o font-5x7.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-8x12.o font-8x12.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcdutils.o lcdutils.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcddraw.o lcddraw.c
+msp430-elf-ar crs libLcd.a font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcddemo.o lcddemo.c
+lcddemo.c:5:10: fatal error: libTimer.h: No such file or directory
+ #include <libTimer.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: lcddemo.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-5x7.o   lcddemo.c  lcddraw.o   lcdutils.h  Makefile
+font-11x16.o  font-8x12.c  lcddraw.c  lcdtypes.h  lcdutils.o  README.md
+font-5x7.c    font-8x12.o  lcddraw.h  lcdutils.c  libLcd.a
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> cd
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd wakedemo
+bash: cd: wakedemo: No such file or directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o wakedemo.o wakedemo.c
+wakedemo.c:4:10: fatal error: lcddraw.h: No such file or directory
+ #include "lcddraw.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: wakedemo.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o msquares.o msquares.c
+msquares.c:2:10: fatal error: libTimer.h: No such file or directory
+ #include <libTimer.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: msquares.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o wakedemo.o wakedemo.c
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: wakedemo.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: wakedemo.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wakedemo.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: wakedemo.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make load
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: wakedemo.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o msquares.o msquares.c
+msquares.c:2:10: fatal error: libTimer.h: No such file or directory
+ #include <libTimer.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: msquares.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o msquares.o msquares.c
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o msquares.elf msquares.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: msquares.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o msquares.elf msquares.o wdt_handler.o 
+msquares.o: In function `update_shape':
+msquares.c:(.text+0xf0): undefined reference to `and_sr'
+msquares.c:(.text+0xfe): undefined reference to `or_sr'
+msquares.c:(.text+0x136): undefined reference to `fillRectangle'
+msquares.c:(.text+0x162): undefined reference to `fillRectangle'
+msquares.o: In function `main':
+msquares.c:(.text+0x186): undefined reference to `configureClocks'
+msquares.c:(.text+0x18a): undefined reference to `lcd_init'
+msquares.c:(.text+0x192): undefined reference to `enableWDTInterrupts'
+msquares.c:(.text+0x196): undefined reference to `or_sr'
+msquares.c:(.text+0x1a0): undefined reference to `clearScreen'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: msquares.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o msquares.elf msquares.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: msquares.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> 
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd lcdLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-5x7.o   lcddemo.c  lcddraw.o   lcdutils.h  Makefile
+font-11x16.o  font-8x12.c  lcddraw.c  lcdtypes.h  lcdutils.o  README.md
+font-5x7.c    font-8x12.o  lcddraw.h  lcdutils.c  libLcd.a
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-5x7.o   lcddemo.c  lcddraw.o   lcdutils.h  Makefile
+font-11x16.o  font-8x12.c  lcddraw.c  lcdtypes.h  lcdutils.o  README.md
+font-5x7.c    font-8x12.o  lcddraw.h  lcdutils.c  libLcd.a
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> cd
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd timerLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> ls
+clocksTimer.c  clocksTimer.h  libTimer.h  Makefile  sr.h  sr.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd timerLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os   -c -o clocksTimer.o clocksTimer.c
+msp430-elf-as   -o sr.o sr.s
+msp430-elf-ar crs libTimer.a clocksTimer.o sr.o
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> cd msquares
+bash: cd: msquares: No such file or directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o msquares.elf msquares.o wdt_handler.o -lTimer -lLcd 
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lTimer
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/bin/ld: cannot find -lLcd
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: msquares.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make install
+make: *** No rule to make target 'install'.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> make
+(cd timerLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+mkdir -p ../h ../lib
+mv libTimer.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+(cd lcdLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+mkdir -p ../h ../lib
+mv libLcd.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+(cd wakedemo; make)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+student@systems-vm:~/project-3-lcd-Sh0otGit> make install
+make: *** No rule to make target 'install'.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd lib
+student@systems-vm:~/project-3-lcd-Sh0otGit/lib> ls
+libLcd.a  libTimer.a
+student@systems-vm:~/project-3-lcd-Sh0otGit/lib> make
+make: *** No targets specified and no makefile found.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/lib> ls
+libLcd.a  libTimer.a
+student@systems-vm:~/project-3-lcd-Sh0otGit/lib> cd
+student@systems-vm:~> cd 2-blinky-toy-Sh0otGit/
+student@systems-vm:~/2-blinky-toy-Sh0otGit> ls
+demos  project  README.md
+student@systems-vm:~/2-blinky-toy-Sh0otGit> cd project
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project> ls
+lib  README.md  src  timerLib
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project> make
+make: *** No targets specified and no makefile found.  Stop.
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project> cd src
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> make
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o buzzer.o buzzer.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include  -o main.elf main.o p1_interrupt_handler.o buzzer.o stateMachines.o led.o switches.o ../timerLib/libTimer.a 
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> ls
+buzzer.c  led.c  main.c    Makefile                stateMachines.c  switches.c
+buzzer.h  led.h  main.elf  p1_interrupt_handler.c  stateMachines.h  switches.h
+buzzer.o  led.o  main.o    p1_interrupt_handler.o  stateMachines.o  switches.o
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> cd
+student@systems-vm:~> 
+student@systems-vm:~> ls
+0-asciiart-Sh0otgit    Desktop                      #*message*-20230302-211956#  Pictures   ti
+1-tokenizer-Sh0otGit   Documents                    #*message*-20230307-233315#  Public     Videos
+2-blinky-toy-Sh0otGit  Downloads                    #*message*-20230308-024328#  Templates
+bin                    #*message*-20230219-014823#  Music                        testCode
+student@systems-vm:~> git clone https://github.com/utep-cs-systems-courses/project-3-lcd-Sh0otGit.git
+Cloning into 'project-3-lcd-Sh0otGit'...
+remote: Enumerating objects: 31, done.        
+remote: Counting objects: 100% (31/31), done.        
+remote: Compressing objects: 100% (28/28), done.        
+remote: Total 31 (delta 2), reused 23 (delta 2), pack-reused 0        
+Unpacking objects: 100% (31/31), done.
+student@systems-vm:~> ls
+0-asciiart-Sh0otgit    Documents                    #*message*-20230308-024328#  Templates
+1-tokenizer-Sh0otGit   Downloads                    Music                        testCode
+2-blinky-toy-Sh0otGit  #*message*-20230219-014823#  Pictures                     ti
+bin                    #*message*-20230302-211956#  project-3-lcd-Sh0otGit       Videos
+Desktop                #*message*-20230307-233315#  Public
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd timerLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> ls
+clocksTimer.c  clocksTimer.h  libTimer.h  Makefile  sr.h  sr.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> ls
+clocksTimer.c  clocksTimer.h  libTimer.h  Makefile  sr.h  sr.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/timerLib> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+lcdLib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> make
+(cd timerLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+msp430-elf-gcc -mmcu=msp430g2553 -Os   -c -o clocksTimer.o clocksTimer.c
+msp430-elf-as   -o sr.o sr.s
+msp430-elf-ar crs libTimer.a clocksTimer.o sr.o
+mkdir -p ../h ../lib
+mv libTimer.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+(cd lcdLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-11x16.o font-11x16.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-5x7.o font-5x7.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o font-8x12.o font-8x12.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcdutils.o lcdutils.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcddraw.o lcddraw.c
+msp430-elf-ar crs libLcd.a font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
+mkdir -p ../h ../lib
+mv libLcd.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+(cd wakedemo; make)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o wakedemo.o wakedemo.c
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o wakedemo.elf wakedemo.o wdt_handler.o -lTimer -lLcd 
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make load
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o msquares.o msquares.c
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/  -o msquares.elf msquares.o wdt_handler.o -lTimer -lLcd 
+msp430loader.sh msquares.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:17: load] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> make load
+msp430loader.sh msquares.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  msquares.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f msquares.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2344 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.elf  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.elf  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wakedemo.elf  wakedemo.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+make: Nothing to be done for 'all'.
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make load
+msp430loader.sh wakedemo.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  wakedemo.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f wakedemo.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2364 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd lcdLib
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-5x7.c  font-8x12.c  lcddemo.c  lcddraw.h  lcdtypes.h  lcdutils.h  Makefile
+font-11x16.o  font-5x7.o  font-8x12.o  lcddraw.c  lcddraw.o  lcdutils.c  lcdutils.o  README.md
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> make load
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcddemo.o lcddemo.c
+msp430-elf-ar crs libLcd.a font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h  -L/opt/ti/msp430_gcc/include -L../lib  lcddemo.o libLcd.a -o lcddemo.elf -lTimer 
+msp430loader.sh lcddemo.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  lcddemo.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f lcddemo.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1604 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h    -c -o lcddemo.o lcddemo.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h  -L/opt/ti/msp430_gcc/include -L../lib  lcddemo.o libLcd.a -o lcddemo.elf -lTimer 
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> make load
+msp430loader.sh lcddemo.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  lcddemo.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f lcddemo.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1604 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> ls
+font-11x16.c  font-5x7.o   lcddemo.c    lcddraw.c  lcdtypes.h  lcdutils.o  README.md
+font-11x16.o  font-8x12.c  lcddemo.elf  lcddraw.h  lcdutils.c  libLcd.a
+font-5x7.c    font-8x12.o  lcddemo.o    lcddraw.o  lcdutils.h  Makefile
+student@systems-vm:~/project-3-lcd-Sh0otGit/lcdLib> cd
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls -
+ls: cannot access '-': No such file or directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/project>cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wakedemo.elf  wakedemo.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> ls
+Makefile  wakedemo.c  wakedemo.elf  wakedemo.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd switches.c
+bash: cd: switches.c: Not a directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+#Makefile#  #switches.c#  switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.elf  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd Makefile
+bash: cd: Makefile: Not a directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+#Makefile#  #switches.c#  switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  Makefile~  #switches.c#  switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+make: *** No rule to make target 'switches.os', needed by 'main.elf'.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+Makefile:2: *** unterminated variable reference.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+Makefile:2: *** unterminated variable reference.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  Makefile~  #switches.c#  switches.c  switches.c~  switches.h  switches.h~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> rm "Makefile~"
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> rm "#switches.c#"
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> rm "switches.c~"
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> rm "switches.h~"
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h  wdt_handler.s  wdt_handler.s~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h  wdt_handler.s  wdt_handler.s~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+Makefile:2: *** unterminated variable reference.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h  wdt_handler.s  wdt_handler.s~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> make
+(cd timerLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+msp430-elf-ar crs libTimer.a clocksTimer.o sr.o
+mkdir -p ../h ../lib
+mv libTimer.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+(cd lcdLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+mkdir -p ../h ../lib
+mv libLcd.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+(cd wakedemo; make)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> make
+(cd timerLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+msp430-elf-ar crs libTimer.a clocksTimer.o sr.o
+mkdir -p ../h ../lib
+mv libTimer.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/timerLib'
+(cd lcdLib; make install)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+msp430-elf-ar crs libLcd.a font-11x16.o font-5x7.o font-8x12.o lcdutils.o lcddraw.o
+mkdir -p ../h ../lib
+mv libLcd.a ../lib
+cp *.h ../h
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/lcdLib'
+(cd wakedemo; make)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/wakedemo'
+(cd project; make)
+make[1]: Entering directory '/home/student/project-3-lcd-Sh0otGit/project'
+Makefile:2: *** unterminated variable reference.  Stop.
+make[1]: Leaving directory '/home/student/project-3-lcd-Sh0otGit/project'
+make: *** [Makefile:5: all] Error 2
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h  wdt_handler.s  wdt_handler.s~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd Makefile
+bash: cd: Makefile: Not a directory
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+Makefile:2: *** unterminated variable reference.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> Make
+If 'Make' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf Make
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+Makefile:2: *** unterminated variable reference.  Stop.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -0s -I../h   -c -o switches.o switches.c
+msp430-elf-gcc: error: unrecognized command line option '-0s'; did you mean '-Os'?
+make: *** [<builtin>: switches.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> MAKE
+If 'MAKE' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf MAKE
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -c   -o wdt_handler.o wdt_handler.s
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+Makefile  switches.c  switches.h  switches.o  wdt_handler.o  wdt_handler.s  wdt_handler.s~
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+main.c   Makefile    switches.h  wdt_handler.o  wdt_handler.s~
+main.c~  switches.c  switches.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd msquares
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> ls
+Makefile  msquares.c  msquares.elf  msquares.o  wdt_handler.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/msquares> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+main.c   Makefile    switches.h  wdt_handler.o  wdt_handler.s~
+main.c~  switches.c  switches.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x1a): undefined reference to `wdt_c_handler'
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+/opt/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/8.2.0/../../../../msp430-elf/lib/430/libcrt.a(crt_main.o): In function `.Loc.204.1':
+(.crt_0700call_init_then_main+0x8): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'main':
+main.c:8:12: error: 'LED' undeclared (first use in this function)
+   P1DIR |= LED;
+            ^~~
+main.c:8:12: note: each undeclared identifier is reported only once for each function it appears in
+In file included from /opt/ti/msp430_gcc/include/msp430g2553.h:65,
+                 from /opt/ti/msp430_gcc/include/msp430.h:1423,
+                 from main.c:1:
+main.c: At top level:
+main.c:27:35: error: expected ')' before 'PORT_2'
+ void __interrupt_vec(PORT2_VECTOR PORT_2()){
+                                   ^~~~~~
+main.c:27:6: error: expected identifier or '(' before ')' token
+ void __interrupt_vec(PORT2_VECTOR PORT_2()){
+      ^~~~~~~~~~~~~~~
+main.c:28:8: error: stray '@' in program
+   if (P@IFG & SWITCHES){
+        ^
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+In file included from /opt/ti/msp430_gcc/include/msp430g2553.h:65,
+                 from /opt/ti/msp430_gcc/include/msp430.h:1423,
+                 from main.c:1:
+main.c:29:35: error: expected ')' before 'PORT_2'
+ void __interrupt_vec(PORT2_VECTOR PORT_2()){
+                                   ^~~~~~
+main.c:29:6: error: expected identifier or '(' before ')' token
+ void __interrupt_vec(PORT2_VECTOR PORT_2()){
+      ^~~~~~~~~~~~~~~
+main.c:30:8: error: stray '@' in program
+   if (P@IFG & SWITCHES){
+        ^
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+wdt_handler.o: In function `WDT':
+(.text+0x36): undefined reference to `redrawScreen'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1862 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1854 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1854 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c:11:1: error: unknown type name 'pos'
+ pos startPos[2] = {10, 10};
+ ^~~
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 1932 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'wdt_c_handler':
+main.c:61:29: error: 'colVelocity' undeclared (first use in this function)
+     short newCol = oldCol + colVelocity;
+                             ^~~~~~~~~~~
+main.c:61:29: note: each undeclared identifier is reported only once for each function it appears in
+main.c:62:19: error: 'colLimits' undeclared (first use in this function)
+     if (newCol <= colLimits[0] || newCol >= colLimits[1])
+                   ^~~~~~~~~
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'main':
+main.c:46:7: warning: implicit declaration of function 'square_update' [-Wimplicit-function-declaration]
+       square_update();
+       ^~~~~~~~~~~~~
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o: In function `main':
+main.c:(.text+0x70): undefined reference to `square_update'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c:3:10: fatal error: lcdLib/lcdutils.h: No such file or directory
+ #include "lcdLib/lcdutils.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o:(.data+0x14): multiple definition of `switches'
+switches.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o:(.data+0x14): multiple definition of `switches'
+switches.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c:9:1: warning: data definition has no type or storage class
+ switches = 0;
+ ^~~~~~~~
+main.c:9:1: warning: type defaults to 'int' in declaration of 'switches' [-Wimplicit-int]
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o:(.data+0x14): multiple definition of `switches'
+switches.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+In file included from main.c:5:
+switches.h:15:12: warning: 'switches' initialized and declared 'extern'
+ extern int switches = 0;
+            ^~~~~~~~
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o:(.data+0x14): multiple definition of `switches'
+switches.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o switches.o switches.c
+In file included from switches.c:5:
+switches.h:15:12: warning: 'switches' initialized and declared 'extern'
+ extern int switches = 0;
+            ^~~~~~~~
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+main.o:(.data+0x14): multiple definition of `switches'
+switches.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: main.elf] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+main.c   main.elf  Makefile    switches.h  wdt_handler.o  wdt_handler.s~
+main.c~  main.o    switches.c  switches.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make load
+msp430loader.sh wakedemo.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  wakedemo.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f wakedemo.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2364 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> make
+make: Nothing to be done for 'all'.
+student@systems-vm:~/project-3-lcd-Sh0otGit/wakedemo> cd -
+/home/student/project-3-lcd-Sh0otGit
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd project
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+main.c   main.elf  Makefile    switches.h  wdt_handler.o  wdt_handler.s~
+main.c~  main.o    switches.c  switches.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o switches.o switches.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2044 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'screen_update_ball':
+main.c:25:47: error: expected ')' before ';' token
+   draw_ball(drawPos[0], drawPos[1], COLOR_BLUE;
+                                               ^
+main.c:29:50: error: expected ';' before '}' token
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+                                                  ^
+                                                  ;
+ }
+ ~                                                 
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'screen_update_ball':
+main.c:25:47: error: expected ')' before '}' token
+   draw_ball(drawPos[0], drawPos[1], COLOR_BLUE};
+                                               ^
+main.c:25:47: error: expected ';' before '}' token
+main.c: At top level:
+main.c:26:3: error: expected identifier or '(' before 'for'
+   for (char axis = 0; axis < 2; axis ++){
+   ^~~
+main.c:26:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   for (char axis = 0; axis < 2; axis ++){
+                            ^
+main.c:26:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   for (char axis = 0; axis < 2; axis ++){
+                                      ^~
+main.c:29:13: error: expected declaration specifiers or '...' before 'drawPos'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+             ^~~~~~~
+main.c:29:25: error: expected declaration specifiers or '...' before 'drawPos'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+                         ^~~~~~~
+In file included from main.c:3:
+../h/lcdutils.h:62:15: error: expected declaration specifiers or '...' before numeric constant
+ #define WHITE 0xFFFF
+               ^~~~~~
+../h/lcdutils.h:64:23: note: in expansion of macro 'WHITE'
+ #define COLOR_WHITE   WHITE
+                       ^~~~~
+main.c:29:37: note: in expansion of macro 'COLOR_WHITE'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+                                     ^~~~~~~~~~~
+main.c:30:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+main.c: In function 'screen_update_ball':
+main.c:25:47: error: expected ')' before '}' token
+   draw_ball(drawPos[0], drawPos[1], COLOR_BLUE};
+                                               ^
+main.c:25:47: error: expected ';' before '}' token
+main.c: At top level:
+main.c:26:3: error: expected identifier or '(' before 'for'
+   for (char axis = 0; axis < 2; axis ++){
+   ^~~
+main.c:26:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '<' token
+   for (char axis = 0; axis < 2; axis ++){
+                            ^
+main.c:26:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+   for (char axis = 0; axis < 2; axis ++){
+                                      ^~
+main.c:29:13: error: expected declaration specifiers or '...' before 'drawPos'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+             ^~~~~~~
+main.c:29:25: error: expected declaration specifiers or '...' before 'drawPos'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+                         ^~~~~~~
+In file included from main.c:3:
+../h/lcdutils.h:62:15: error: expected declaration specifiers or '...' before numeric constant
+ #define WHITE 0xFFFF
+               ^~~~~~
+../h/lcdutils.h:64:23: note: in expansion of macro 'WHITE'
+ #define COLOR_WHITE   WHITE
+                       ^~~~~
+main.c:29:37: note: in expansion of macro 'COLOR_WHITE'
+   draw_ball(drawPos[0], drawPos[1], COLOR_WHITE);
+                                     ^~~~~~~~~~~
+main.c:30:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [<builtin>: main.o] Error 1
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2072 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2068 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ake
+If 'ake' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf ake
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2068 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> ls
+main.c   main.elf  Makefile    switches.h  wdt_handler.o  wdt_handler.s~
+main.c~  main.o    switches.c  switches.o  wdt_handler.s
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h   -c -o main.o main.c
+msp430-elf-gcc -mmcu=msp430g2553 -Os -I../h -L../lib -L/opt/ti/msp430_gcc/include/ -o main.elf switches.o wdt_handler.o main.o -lTimer -lLcd
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2066 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/project-3-lcd-Sh0otGit/project> cd
+student@systems-vm:~> ls
+0-asciiart-Sh0otgit    Documents                    #*message*-20230308-024328#  Templates
+1-tokenizer-Sh0otGit   Downloads                    Music                        testCode
+2-blinky-toy-Sh0otGit  #*message*-20230219-014823#  Pictures                     ti
+bin                    #*message*-20230302-211956#  project-3-lcd-Sh0otGit       Videos
+Desktop                #*message*-20230307-233315#  Public
+student@systems-vm:~> cd project-3-lcd-Sh0otGit/
+student@systems-vm:~/project-3-lcd-Sh0otGit> ls
+h  lcdLib  lib  LICENSE  Makefile  msquares  project  README.md  timerLib  wakedemo
+student@systems-vm:~/project-3-lcd-Sh0otGit> cd
+student@systems-vm:~> cd 2-blinky-toy-Sh0otGit/
+student@systems-vm:~/2-blinky-toy-Sh0otGit> ls
+demos  project  README.md
+student@systems-vm:~/2-blinky-toy-Sh0otGit> cd project
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project> ls
+lib  README.md  src  timerLib
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project> cd src
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> ls
+buzzer.c  led.c  main.c    Makefile                stateMachines.c  switches.c
+buzzer.h  led.h  main.elf  p1_interrupt_handler.c  stateMachines.h  switches.h
+buzzer.o  led.o  main.o    p1_interrupt_handler.o  stateMachines.o  switches.o
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> cd stateMachines.c
+bash: cd: stateMachines.c: Not a directory
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> make
+msp430-elf-gcc -mmcu=msp430g2553 -I../h   -c -o stateMachines.o stateMachines.c
+msp430-elf-gcc -mmcu=msp430g2553 -I../h -L/opt/ti/msp430_gcc/include  -o main.elf main.o p1_interrupt_handler.o buzzer.o stateMachines.o led.o switches.o ../timerLib/libTimer.a 
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> make load
+msp430loader.sh main.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> make load
+msp430loader.sh main.elf
+check 
+No valid msp430 devices found! Are you sure the MSP430 is connected to the vm (check lsusb)? 
+make: *** [Makefile:18: load] Error 1
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> make load
+msp430loader.sh main.elf
+check 
+Detected msp430 dev kit
+/opt/ti/uniflash/dslite.sh --config /opt/ti/uniflash/MSP430G2553.ccxml -f  main.elf
+Executing the following command:
+> /opt/ti/uniflash_5.1.0/deskdb/content/TICloudAgent/linux/ccs_base/DebugServer/bin/DSLite flash --config /opt/ti/uniflash/MSP430G2553.ccxml -f main.elf
+
+For more details and examples, please refer to the UniFlash Quick Start guide.
+
+info: MSP430:  Flash/FRAM usage is 2350 bytes. RAM usage is 0 bytes.
+student@systems-vm:~/2-blinky-toy-Sh0otGit/project/src> 

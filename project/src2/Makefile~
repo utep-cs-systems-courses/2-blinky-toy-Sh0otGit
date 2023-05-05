@@ -1,0 +1,17 @@
+CPU			= msp430g2553
+CFLAGS			= -mmcu=${CPU} -0s -I../h
+LDFLAGS			= -L../lib -L/opt/ti/msp430_gcc/include/
+
+cc 			= msp430-elf-gcc
+AS			= msp430-elf-gcc -mmcu=${CPU} -c
+
+all:main.elf
+
+wakedemo.elf: ${COMMON_OBJECTS} main.o wdt_handler.o
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
+
+load: wakedemo.elf
+	msp430loader.sh $^
+
+clean:
+	rm -f *.o *.elf

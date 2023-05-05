@@ -2,6 +2,7 @@
 #define stateMachine_included
 
 void button_state();
-void song();
+void siren();
+void mary_lamb();
 
 #endif
